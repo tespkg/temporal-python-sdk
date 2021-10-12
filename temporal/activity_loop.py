@@ -73,7 +73,7 @@ async def activity_task_loop_func(worker: Worker):
                     logger.info(f"Not completing activity {task.activity_type.name}({str(args)[1:-1]})")
                     continue
 
-                logger.info(
+                logger.debug(
                     f"Activity {task.activity_type.name}({str(args)[1:-1]}) returned {return_value}")
 
                 try:
